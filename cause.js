@@ -16,7 +16,7 @@
         gif: "gif1.gif"
     },
     { 
-        text: "master chef bhi apki cooking aage fail hain", 
+        text: "Sabki care karti ho par dikhati nahi 💕", 
         emoji: "🚀",
         gif: "gif2.gif"
     }
