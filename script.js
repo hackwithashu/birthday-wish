@@ -67,39 +67,29 @@ window.addEventListener('load', () => {
 
 // Hover effects
        // Hover effects
-   // Hover effects
-document.querySelectorAll('.cta-button').forEach(button => {
+       document.querySelectorAll('.cta-button').forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            gsap.to(button, {
+                scale: 1.1,
+                duration: 0.3
+            });
+        });
 
-    button.addEventListener('mouseenter', () => {
-        gsap.to(button, {
-            scale: 1.1,
-            duration: 0.3
+        button.addEventListener('mouseleave', () => {
+            gsap.to(button, {
+                scale: 1,
+                duration: 0.3
+            });
+        });
+
+        // Smooth page transition on click
+        button.addEventListener('click', () => {
+            gsap.to('body', {
+                opacity: 0,
+                duration: 1,
+                onComplete: () => {
+                    window.location.href = 'cause.html'; // Replace with the actual URL of the next page
+                }
+            });
         });
     });
-
-    button.addEventListener('mouseleave', () => {
-        gsap.to(button, {
-            scale: 1,
-            duration: 0.3
-        });
-    });
-
-    // Smooth page transition on click
-    button.addEventListener('click', () => {
-
-        // Play background music
-        bgMusic.play().catch(() => {
-            console.log("User interaction required to play music");
-        });
-
-        // Page fade animation
-        gsap.to('body', {
-            opacity: 0,
-            duration: 1,
-            onComplete: () => {
-                window.location.href = 'cause.html';
-            }
-        });
-    });
-
-}); // ✅ this closes forEach
