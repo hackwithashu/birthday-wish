@@ -16,7 +16,7 @@
         gif: "gif1.gif"
     },
     { 
-        text: "Sabki care karti ho par dikhati nahi 💕", 
+        text: "Sabki care karti ho par dikhati nahi💕", 
         emoji: "🚀",
         gif: "gif2.gif"
     }
